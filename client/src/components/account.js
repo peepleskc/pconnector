@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, Cell } from 'react-mdl';
-import { login } from './userfunctions';
 import Footer from './footer';
+import axios from 'axios';
 import './account.css';
 
 class Account extends Component {
@@ -28,11 +28,6 @@ class Account extends Component {
       password: this.state.password
     }
 
-    login(user).then(res => {
-      if(res){
-        this.props.history.push('/profile')
-      }
-    })
   }
 
   render() {

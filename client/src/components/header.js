@@ -1,69 +1,55 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import './header.css';
 
 class Header extends Component {
-  logOut(e){
-    e.preventDefault()
-    localStorage.removeItem('usertoken')
-    this.props.history.push('/')
-  }
 
-  render() {
-    const loginRegLink = (
-      <ul className="navbar-nav">
-        <li className="nav-item">
-          <Link to="/account" className="nav-link">
-            Login
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/legal" className="nav-link">
-            Terms
-          </Link>
-        </li>
-      </ul>
-    )
-
-    const userLink = (
-      <ul className="navbar-nav">
-        <li className="nav-item">
-          <Link to="/about" className="nav-link">
-            Account
-          </Link>
-        </li>
-        <li className="nav-item">
-          <a href="" onClick={this.logOut.bind(this)} className="nav-link">
-            Logout
-          </a>
-        </li>
-      </ul>
-    )
-
+  render(){
     return(
-      <nav className="navbar navbar-expand-lg navbar-dark big-dark rounded">
-        <button className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbar1"
-          aria-controls="navbar1"
-          aria-expanded="false"
-          aria-lable="Toggle Navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
+      <nav className ="navbar navbar-default navbar-fixed-top">
 
-        <div className="collapse navbar-collapse justify-content-md-center" id="navbar1">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link to="/" className="nav-link">
-                Home
-              </Link>
-            </li>
-          </ul>
-          {localStorage.usertoken ? userLink : loginRegLink}
+      <img
+        src="logo.png"
+        alt="logo"
+        className="logo-img-head"
+      />
+        <div className = "container">
+
+          <div className = "col-sm-6">
+            <div className = "left">
+              <a className = "navbar-brand" href="/">
+                Pianotes
+              </a>
+              <button
+                className="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#mobile-nav"
+              >
+                <span className="navbar-toggler-icon" />
+              </button>
+            </div>
+          </div>
+
+          <div className= "col-sm-6">
+            <div className= "right">
+              <ul className="nav navbar-nav navbar-right">
+                <li className="nav-item">
+                  <a className="nav-link" href="/about">About</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/legal">Terms</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/login">Login</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </nav>
     )
   }
 }
 
-export default withRouter()
+export default Header

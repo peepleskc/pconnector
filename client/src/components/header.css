@@ -1,0 +1,29 @@
+.navbar{
+  background: #00c6ff;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.navbar a{
+  color: white;
+}
+
+
+.right li{
+  float: right;
+}
+
+.nav {
+  display: inline-block;
+  padding-left: 250px;
+}
+
+.nav-item{
+  padding-left: 45px;
+}
+
+.logo-img-head{
+  height: 50px;
+  padding-left: 40px;
+}

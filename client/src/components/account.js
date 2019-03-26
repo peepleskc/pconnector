@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Grid, Cell } from 'react-mdl';
 import Footer from './footer';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
+import classnames from 'classnames';
 import './account.css';
 
 class Account extends Component {
@@ -28,27 +29,32 @@ class Account extends Component {
       password: this.state.password
     }
 
+    axios
+      .post('/api/users/login', user)
+      .then(res => {
+        localStorage.setItem('usertoken', res.data)
+        this.props.history.push('/upload')
+      })
+      .catch(err => this.setState({errors: err.response.data}));
+
   }
 
   render() {
+    const { errors } = this.state;
+
     return(
       <div className="background">
         <div className="container">
-
+        <div className="container1">
           <div style={{width: '100%', margin: 'auto'}}>
-            <Grid className="account">
-            <Cell col={12}>
               <div className="account-logo">
               <img
                 src="user.png"
                 alt="logo"
                 className="logo-img-account"
               />
+              </div>
           </div>
-
-            </Cell>
-            </Grid>
-        </div>
           <div className="row">
             <div className="col-md-8 mt5 mx-auto">
               <form noValidate onSubmit={this.onSubmit}>
@@ -57,26 +63,36 @@ class Account extends Component {
                   <label htmlFor="email">E-mail</label>
                   <input
                     type="email"
-                    className="form-control"
+                    className={classnames("form-control", {
+                      'is-invalid': errors.email
+                    })}
                     name="email"
                     placeholder="your@email"
                     value={this.state.email}
                     onChange={this.onChange}
                   />
+                  {errors.email && (
+                    <div className="invalid-feedback">{errors.email}</div>
+                  )}
                 </div>
                 <div className="form-group">
                   <label htmlFor="password">Password</label>
                   <input
                     type="password"
-                    className="form-control"
+                    className={classnames("form-control", {
+                      'is-invalid': errors.password
+                    })}
                     name="password"
                     placeholder="password"
                     value={this.state.password}
                     onChange={this.onChange}
                   />
+                  {errors.password && (
+                    <div className="invalid-feedback">{errors.password}</div>
+                  )}
                 </div>
                 <div className="register">
-                  <a href="/register" target="_top" class="cannot-login">Don't have an account? Register here</a>
+                  <Link to="/register" target="_top" class="cannot-login">Don't have an account? Register here</Link>
                 </div>
                 <button
                   type="submit"
@@ -86,6 +102,7 @@ class Account extends Component {
                 </button>
               </form>
             </div>
+          </div>
         </div>
       </div>
       <Footer />

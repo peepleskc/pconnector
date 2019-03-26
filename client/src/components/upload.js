@@ -18,7 +18,14 @@ class Landing extends Component {
               <div className="social-links">
                 <img class= "icon" src="music-file.png"/>
               </div>
-              <p>Log in to get started</p>
+              <p>Upload music file here</p>
+              <form id="upload">
+              <input
+                className="file-upload"
+                type="file"
+                multiple="false"
+                accept=".doc, application/msword, .docx, application/vnd.openxmlformats-officedocument.wordprocessingml.document, "/>
+              </form>
             </div>
         </div>
         </Link>

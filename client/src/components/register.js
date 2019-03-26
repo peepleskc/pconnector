@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Grid, Cell } from 'react-mdl';
 import axios from 'axios';
 import classnames from 'classnames';
 import Footer from './footer';
+import { Link } from 'react-router-dom';
 
 class Register extends Component {
   constructor() {
@@ -35,7 +35,7 @@ class Register extends Component {
 
     axios
       .post('/api/users/register', newUser)
-      .then(res => console.log(res.data))
+      .then(res => this.props.history.push('/login'))
       .catch(err => this.setState({errors: err.response.data}));
 
   }
@@ -46,6 +46,7 @@ class Register extends Component {
     return (
       <div className="background">
         <div className="container">
+        <div className="container2">
           <img
             src="user.png"
             alt="logo"
@@ -124,7 +125,7 @@ class Register extends Component {
                     type="checkbox"
                     name="checkbox"
                     value="check"
-                    id="agree" /> I have read and agree to the <a href="/legal" target='_blank'> Terms and Conditions</a>
+                    id="agree" /> I have read and agree to the <Link to="/legal" target='_blank'> Terms and Conditions</Link>
                 </div>
                 <button
                   type="submit"
@@ -135,6 +136,7 @@ class Register extends Component {
               </form>
             </div>
         </div>
+      </div>
       </div>
       <Footer />
     </div>

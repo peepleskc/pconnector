@@ -1,69 +1,41 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import './header.css';
 
 class Header extends Component {
-  logOut(e){
-    e.preventDefault()
-    localStorage.removeItem('usertoken')
-    this.props.history.push('/')
-  }
 
-  render() {
-    const loginRegLink = (
-      <ul className="navbar-nav">
-        <li className="nav-item">
-          <Link to="/account" className="nav-link">
-            Login
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/legal" className="nav-link">
-            Terms
-          </Link>
-        </li>
-      </ul>
-    )
-
-    const userLink = (
-      <ul className="navbar-nav">
-        <li className="nav-item">
-          <Link to="/about" className="nav-link">
-            Account
-          </Link>
-        </li>
-        <li className="nav-item">
-          <a href="" onClick={this.logOut.bind(this)} className="nav-link">
-            Logout
-          </a>
-        </li>
-      </ul>
-    )
-
+  render(){
     return(
-      <nav className="navbar navbar-expand-lg navbar-dark big-dark rounded">
-        <button className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbar1"
-          aria-controls="navbar1"
-          aria-expanded="false"
-          aria-lable="Toggle Navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
+    <div className="header">
+      <div className ="inner_header">
 
-        <div className="collapse navbar-collapse justify-content-md-center" id="navbar1">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link to="/" className="nav-link">
-                Home
-              </Link>
-            </li>
-          </ul>
-          {localStorage.usertoken ? userLink : loginRegLink}
+        <div className="logo_container">
+
+          <Link to="/">
+            <div className="logo-pic">
+              <img
+                src="logo.png"
+                alt="logo"
+                className="logo-img-head"
+              />
+            </div>
+
+            <h1>Pianotes</h1>
+
+          </Link>
+
         </div>
-      </nav>
+
+        <ul className="navigation">
+            <Link to="/login"><li>Login</li></Link>
+            <Link to="/legal"><li>Terms</li></Link>
+            <Link to="/about"><li>About</li></Link>
+        </ul>
+      </div>
+    </div>
+
     )
   }
 }
 
-export default withRouter()
+export default Header

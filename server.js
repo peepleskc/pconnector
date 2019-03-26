@@ -35,6 +35,11 @@ app.use("/api/users", users);
 app.use("/api/profile", profile);
 app.use("/api/posts", posts);
 
+// Server static assets if in production
+//if(process.env) {
+//
+//}
+
 const port = process.env.PORT || 8000;
 
 app.listen(port, () => console.log(`Server running on port ${port}`));

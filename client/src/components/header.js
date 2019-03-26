@@ -6,48 +6,34 @@ class Header extends Component {
 
   render(){
     return(
-      <nav className ="navbar navbar-default navbar-fixed-top">
+    <div className="header">
+      <div className ="inner_header">
 
-      <img
-        src="logo.png"
-        alt="logo"
-        className="logo-img-head"
-      />
-        <div className = "container">
+        <div className="logo_container">
 
-          <div className = "col-sm-6">
-            <div className = "left">
-              <a className = "navbar-brand" href="/">
-                Pianotes
-              </a>
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#mobile-nav"
-              >
-                <span className="navbar-toggler-icon" />
-              </button>
+          <Link to="/">
+            <div className="logo-pic">
+              <img
+                src="logo.png"
+                alt="logo"
+                className="logo-img-head"
+              />
             </div>
-          </div>
 
-          <div className= "col-sm-6">
-            <div className= "right">
-              <ul className="nav navbar-nav navbar-right">
-                <li className="nav-item">
-                  <a className="nav-link" href="/about">About</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/legal">Terms</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/login">Login</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+            <h1>Pianotes</h1>
+
+          </Link>
+
         </div>
-      </nav>
+
+        <ul className="navigation">
+            <Link to="/login"><li>Login</li></Link>
+            <Link to="/legal"><li>Terms</li></Link>
+            <Link to="/about"><li>About</li></Link>
+        </ul>
+      </div>
+    </div>
+
     )
   }
 }

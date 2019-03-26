@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Footer from './footer';
 
 class Landing extends Component {
@@ -11,7 +12,7 @@ class Landing extends Component {
           <p>Convert your sound files to sheet music</p>
         </div>
 
-        <a href="/account">
+        <Link to="/login">
           <div className="outer-box">
             <div className="banner-text">
               <div className="social-links">
@@ -20,7 +21,7 @@ class Landing extends Component {
               <p>Log in to get started</p>
             </div>
         </div>
-        </a>
+        </Link>
 
         <Footer />
       </div>

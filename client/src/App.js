@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { BrowserRouter as Router} from 'react-router-dom';
 import { Provider } from 'react-redux';
 import './App.css';

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import classnames from 'classnames';
 import Footer from './footer';
+import { Link } from 'react-router-dom';
 
 class Register extends Component {
   constructor() {
@@ -124,7 +125,7 @@ class Register extends Component {
                     type="checkbox"
                     name="checkbox"
                     value="check"
-                    id="agree" /> I have read and agree to the <a href="/legal" target='_blank'> Terms and Conditions</a>
+                    id="agree" /> I have read and agree to the <Link to="/legal" target='_blank'> Terms and Conditions</Link>
                 </div>
                 <button
                   type="submit"

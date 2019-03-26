@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Footer from './footer';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import classnames from 'classnames';
 import './account.css';
@@ -32,7 +33,7 @@ class Account extends Component {
       .post('/api/users/login', user)
       .then(res => {
         localStorage.setItem('usertoken', res.data)
-        this.props.history.push('/')
+        this.props.history.push('/upload')
       })
       .catch(err => this.setState({errors: err.response.data}));
 
@@ -91,7 +92,7 @@ class Account extends Component {
                   )}
                 </div>
                 <div className="register">
-                  <a href="/register" target="_top" class="cannot-login">Don't have an account? Register here</a>
+                  <Link to="/register" target="_top" class="cannot-login">Don't have an account? Register here</Link>
                 </div>
                 <button
                   type="submit"

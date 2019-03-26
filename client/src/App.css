@@ -1,8 +1,11 @@
-.landing-page {
+.App{
   background: #00c6ff;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+}
+
+.landing-page {
   text-align: center;
   top: 0;
   left: 0;
@@ -12,13 +15,6 @@
 
 .landing-page a{
   text-decoration: none;
-}
-
-.header-color{
-  background: #00c6ff;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 
 .logo-img {
@@ -97,4 +93,162 @@
   font-size: 15px;
   padding-top: -10px;
   color: white;
+}
+
+
+/* For Header and Footer */
+.navbar {
+  background: #00c6ff;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.footer-page{
+  padding-top: 15%;
+  text-align: center;
+}
+
+.footer-page hr{
+  border-top: 5px line;
+  border-top-width: thin;
+  border-top-color: white;
+  width: 90%;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 25px;
+}
+
+
+/* For Login and Register */
+.container1{
+  width: 55%;
+  background-color: steelblue;
+  padding-top: 5px;
+  padding-bottom: 25px;
+  border: black;
+  border-style: solid;
+  border-color: lightsteelblue;
+  border-width: thin;
+  margin: auto;
+}
+
+.account-logo {
+  text-align: center;
+}
+
+.logo-img-account {
+  font-size: 215px;
+  padding-top: .15em;
+}
+
+.h3{
+  color: white;
+  font-size: 50px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.register{
+   text-decoration: underline;
+   padding-bottom: 10px;
+   text-align: center;
+}
+
+.cannot-login{
+  color: blue;
+}
+
+.col-md-8 label{
+  color: white;
+}
+
+.terms{
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+}
+.terms a{
+  color: blue;
+  text-decoration: underline;
+}
+
+/* For Terms */
+.term-back{
+  background-color: white;
+  width: 85%;
+  height: 50%;
+  text-align: center;
+  margin: auto;
+  border-style: double;
+  border-color: steelblue;
+}
+
+.terms-listed{
+  width: 85%;
+  margin: auto;
+  padding-bottom: 30px;
+}
+
+.term-back h1{
+  font-size: 45px;
+  padding-top: 15px;
+}
+
+.term-back hr{
+  border-top: 5px line;
+  width: 70%;
+  margin: auto;
+  border-top-width: thin;
+  border-color: black;
+  padding-bottom: 20px;
+
+}
+
+.term-back h2{
+  font-size: 35px;
+  padding-bottom: 10px;
+}
+
+.term-back p{
+  text-align: justify;
+}
+
+/* For About */
+.about-back{
+  margin: auto;
+  text-align: center;
+  width: 90%;
+}
+
+.about-back h1 {
+  padding-top: 10px;
+  font-size: 70px;
+  color: white;
+}
+
+.about-back hr {
+  border-top: 5px line;
+  border-top-width: thin;
+  border-color: white;
+  width: 80%;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+.col-sm-6 h2{
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  padding-bottom: 35px;
+  text-decoration: underline;
+}
+
+.pic {
+  border-color: steelblue;
+  border-style: outset;
+  border-radius: 70%;
+  height: 200px;
+  width: 40%;
 }

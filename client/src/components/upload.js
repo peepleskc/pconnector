@@ -49,40 +49,39 @@ class Landing extends Component {
     // Select options for time
     const time = [
       { label: 'select time signature', value: 0 },
-      { label: 'Developer', value: 'Developer' },
-      { label: 'Junior Developer', value: 'Junior Developer' },
-      { label: 'Senior Developer', value: 'Senior Developer' },
-      { label: 'Manager', value: 'Manager' },
-      { label: 'Student or Learning', value: 'Student or Learning' },
-      { label: 'Instructor or Teacher', value: 'Instructor or Teacher' },
-      { label: 'Intern', value: 'Intern' },
-      { label: 'Other', value: 'Other' }
+      { label: '4/4', value: '4/4' },
+      { label: '3/4', value: '3/4' },
+      { label: '2/4', value: '2/4' },
+      { label: '6/8', value: '6/8' }
     ];
 
     // Select options for key
     const key = [
       { label: 'select key signature', value: 0 },
-      { label: 'Developer', value: 'Developer' },
-      { label: 'Junior Developer', value: 'Junior Developer' },
-      { label: 'Senior Developer', value: 'Senior Developer' },
-      { label: 'Manager', value: 'Manager' },
-      { label: 'Student or Learning', value: 'Student or Learning' },
-      { label: 'Instructor or Teacher', value: 'Instructor or Teacher' },
-      { label: 'Intern', value: 'Intern' },
-      { label: 'Other', value: 'Other' }
+      { label: 'Key of C', value: 'Key of C' },
+      { label: 'Key of F', value: 'Key of F' },
+      { label: 'Key of B Flat', value: 'Key of B Flat' },
+      { label: 'Key of E Flat', value: 'Key of E Flat' },
+      { label: 'Key of A Flat', value: 'Key of A Flat' },
+      { label: 'Key of D Flat', value: 'Key of D Flat' },
+      { label: 'Key of G Flat', value: 'Key of G Flat' },
+      { label: 'Key of C Flat', value: 'Key of C Flat' },
+      { label: 'Key of G', value: 'Key of G' },
+      { label: 'Key of D', value: 'Key of D' },
+      { label: 'Key of A', value: 'Key of A' },
+      { label: 'Key of E', value: 'Key of E' },
+      { label: 'Key of B', value: 'Key of B' },
+      { label: 'Key of F Sharp', value: 'Key of F Sharp' },
+      { label: 'Key of C Sharp', value: 'Key of C Sharp' }
     ];
 
     // Select options for clef
     const clef = [
       { label: 'select clef', value: 0 },
-      { label: 'Developer', value: 'Developer' },
-      { label: 'Junior Developer', value: 'Junior Developer' },
-      { label: 'Senior Developer', value: 'Senior Developer' },
-      { label: 'Manager', value: 'Manager' },
-      { label: 'Student or Learning', value: 'Student or Learning' },
-      { label: 'Instructor or Teacher', value: 'Instructor or Teacher' },
-      { label: 'Intern', value: 'Intern' },
-      { label: 'Other', value: 'Other' }
+      { label: 'Treble', value: 'Treble' },
+      { label: 'Bass', value: 'Bass' },
+      { label: 'Alto', value: 'Alto' },
+      { label: 'Tenor', value: 'Tenor' }
     ];
 
     return(

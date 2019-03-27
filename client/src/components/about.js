@@ -5,12 +5,38 @@ import './about.css'
 class About extends Component {
   render() {
     return(
-      <div className="background">
+      <div className="about-background">
+        <div className="aboutus">
+          <div className="about-title">
+            <h1>About Us</h1>
+          </div>
+          <p>{'\t'}Tu ne quaesieris, scire nefas, quem mihi, quem tibi
+             finem di dederint, Leuconoe, nec Babylonios
+             temptaris numeros. ut melius, quidquid erit, pati.
+             seu pluris hiemes seu tribuit Iuppiter ultimam,
+             quae nunc oppositis debilitat pumicibus mare
+             Tyrrhenum. Sapias, vina liques et spatio brevi
+             spem longam reseces. dum loquimur, fugerit invida
+             aetas: carpe diem, quam minimum credula postero. </p>
+        </div>
+
+        <div className="story">
+          <div className="about-title">
+            <h1>Pianote's Story</h1>
+          </div>
+          <p>Tu ne quaesieris, scire nefas, quem mihi, quem tibi
+             finem di dederint, Leuconoe, nec Babylonios
+             temptaris numeros. ut melius, quidquid erit, pati.
+             seu pluris hiemes seu tribuit Iuppiter ultimam,
+             quae nunc oppositis debilitat pumicibus mare
+             Tyrrhenum. Sapias, vina liques et spatio brevi
+             spem longam reseces. dum loquimur, fugerit invida
+             aetas: carpe diem, quam minimum credula postero. </p>
+        </div>
+
         <div className="about-back">
 
-          <h1>Meet the team</h1>
-
-          <hr/>
+          <h1>Meet The Team</h1>
 
           <div className="row">
 

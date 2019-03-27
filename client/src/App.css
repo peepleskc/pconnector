@@ -103,3 +103,12 @@
 .profile h1{
   color: white;
 }
+
+.upload-page{
+  padding-top: 70px;
+}
+
+.upload-page h1{
+  color: white;
+  font-size: 35px;
+}

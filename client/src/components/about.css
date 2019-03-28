@@ -57,4 +57,13 @@
   border-radius: 70%;
   height: 200px;
   width: 40%;
+  max-width: 100%;
+}
+
+.ucf-pic{
+  text-align: center;
+}
+
+.ucf-logo{
+  height: 200px;
 }

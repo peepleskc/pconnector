@@ -122,3 +122,19 @@
   width: 80%;
   margin: auto;
 }*/
+
+.file-uploa/*d*/ {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.file-uploa{
+  display: none;
+}

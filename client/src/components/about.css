@@ -62,8 +62,9 @@
 
 .ucf-pic{
   text-align: center;
+  height: 125px;
 }
 
 .ucf-logo{
-  height: 200px;
+  height: 100%;
 }

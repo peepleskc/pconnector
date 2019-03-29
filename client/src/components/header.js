@@ -74,7 +74,7 @@ class Navbar extends Component {
             alt="logo"
             style={{ width: '55px', marginRight: '5px' }}
           />
-            Pianotes
+          Pianotes
           </Link>
           <button
             className="navbar-toggler"
